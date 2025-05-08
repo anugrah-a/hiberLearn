@@ -19,9 +19,15 @@ public class App
         Session sess = fact.openSession();
         Transaction tx = sess.beginTransaction();
         
-        Employee emp = new Employee("Amit", 25000, "manager", "dev");
+        //Employee emp = new Employee("Amit", 25000, "manager", "dev");
+        Person p1 = new Person();
+        AdhaarCard ad = new AdhaarCard(1111, "deep", "btm", "male", p1);
+        p1.setId(101);
+        p1.setNickName("dee");
+        p1.setCard(ad);
         
-        sess.persist(emp);
+        sess.persist(ad);
+        sess.persist(p1);
         
         tx.commit();
     }

@@ -14,7 +14,7 @@
 	    <property name="hibernate.hbm2ddl.auto">update</property>
 	    <property name="show_sql">true</property>
 	
-	    <mapping class="learn.hiberEmployee.Employee"/>
-		
+	    <mapping class="learn.hiberEmployee.Person"/>
+		<mapping class="learn.hiberEmployee.AdhaarCard"/>
 	</session-factory>
 </hibernate-configuration>
